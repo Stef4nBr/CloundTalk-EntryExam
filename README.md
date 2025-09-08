@@ -29,7 +29,7 @@ npx cypress open
 
 ```
 To run Cypress tests headlessly (mocha reports will be generated):
-"cypress\reports\html\index.html"
+[Report.html](./cypress/reports/html/index.html)
 ```bash
 npx cypress run
 
@@ -42,5 +42,5 @@ Run the performance test script:
 k6 run performance/perf-test.js
 ```
 
-For more detailed information, please refer to the [ReadMe.doc](./ReadMe.doc) 
+For more detailed information, please refer to the [ReadMe.doc](./ReadMe.pdf) 
  file.
