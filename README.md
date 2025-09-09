@@ -39,8 +39,8 @@ npx cypress run
 
 Run the performance test script:
 ```bash
-k6 run performance/perf-test.js
+k6 run .\tests\performance\timestamp-api.test.js
 ```
 
-For more detailed information, please refer to the [ReadMe.doc](./ReadMe.pdf) 
+For more detailed information, please refer to the [ReadMe.pdf](./ReadMe.pdf) 
  file.
