@@ -8,7 +8,7 @@
  * https://helloacm.com/api/unix-timestamp-converter/
  *
  * Scenario:
- * - Simulate 10 virtual users making concurrent requests over 15 seconds.
+ * - Simulate 3 virtual users making concurrent requests over 15 seconds.
  * - Each user sends a GET request to convert a formatted date string to a Unix timestamp.
  *
  * What’s Being Tested:
@@ -55,12 +55,12 @@ const tests = [
     {
         input: '1970-01-01%201:2:03',
         name: 'date → timestamp',
-        expectedPattern: /^\d+$/, // e.g. 1451613802
+        expectedPattern: /^\d+$/, 
     },
     {
         input: '1451613802',
         name: 'timestamp → date',
-        expectedPattern: /^"?\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}"?$/, // handles with or without quotes
+        expectedPattern: /^"?\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}"?$/,
     },
     {
         input: 'invalid-date',
@@ -81,7 +81,7 @@ export default function () {
             console.error(`❌ Test failed: ${test.name}, Response: ${res.body}`);
         }
 
-        sleep(1.5); // slower pacing to avoid blocking
+        sleep(1.5); 
     }
 }
 
